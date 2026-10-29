@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практична робота №4</title>
+    <style>
+        :root {
+            --primary-dark: #1e293b;
+            --secondary-dark: #334155;
+            --accent-blue: #0284c7;
+            --accent-green: #10b981;
+            --accent-red: #ef4444;
+            --bg-light: #f8fafc;
+            --card-bg: #ffffff;
+            --border-color: #cbd5e1;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e293b);
+            color: var(--primary-dark);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background-color: var(--card-bg);
+            padding: 20px 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-dark);
+            font-weight: 700;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-size: 2.2rem;
+            border-bottom: 3px solid var(--accent-blue);
+            padding-bottom: 15px;
+        }
+
+        h2 {
+            margin-top: 40px;
+            font-size: 1.5rem;
+            border-left: 5px solid var(--accent-blue);
+            padding-left: 12px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 20px 0 35px 0;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-color);
+        }
+
+        th, td {
+            padding: 14px 18px;
+            text-align: center;
+        }
+
+        th {
+            background-color: var(--primary-dark);
+            color: #ffffff;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+        }
+
+        td {
+            background-color: #ffffff;
+            border-top: 1px solid #e2e8f0;
+            font-size: 0.95rem;
+        }
+
+        tr:nth-child(even) td {
+            background-color: var(--bg-light);
+        }
+
+        caption {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--secondary-dark);
+            text-align: left;
+        }
+
+        /* Індивідуальне оформлення каталогу книг за id */
+        #book-catalog th {
+            background-color: #0f172a;
+        }
+
+        .break-row td {
+            background-color: #fef3c7 !important;
+            font-style: italic;
+            color: #b45309;
+            font-weight: 600;
+        }
+
+        .lists-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .list-card {
+            background: var(--bg-light);
+            padding: 25px;
+            /* 0 сверху слева, 0 сверху справа, 16px снизу справа, 16px снизу слева */
+            border-radius: 0 0 16px 16px; 
+            border: 1px solid var(--border-color);
+        }
+
+        .list-card h3 {
+            margin-top: 0;
+            color: var(--primary-dark);
+            font-size: 1.2rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 8px;
+        }
+
+        ol, ul {
+            padding-left: 20px;
+            margin: 10px 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Практична робота №4</h1>
+        <p><strong>Тема:</strong> Таблиці та списки в HTML</p>
+        <p><strong>Виконала студентка:</strong> Литвин Поліна</p>
+        
+        <table>
+            <caption>Моніторинг успішності студентів групи</caption>
+            <thead>
+                <tr>
+                    <th scope="col">№ з/п</th>
+                    <th scope="col">Прізвище</th>
+                    <th scope="col">Ім’я</th>
+                    <th scope="col">Назва дисципліни</th>
+                    <th scope="col">Оцінка</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Атамась</td>
+                    <td>Анастасія</td>
+                    <td>Web-програмування</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Данилевська</td>
+                    <td>Поліна</td>
+                    <td>ООП</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Діхтенко</td>
+                    <td>Анна</td>
+                    <td>ІЗВП</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Загадайко</td>
+                    <td>Олексій</td>
+                    <td>Фізична культура</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Зозуляк</td>
+                    <td>Станіслав</td>
+                    <td>Web-програмування</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Клименко</td>
+                    <td>Аня</td>
+                    <td>ООП</td>
+                    <td>5</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table>
+            <caption>Розклад занять</caption>
+            <thead>
+                <tr>
+                    <th colspan="5">Розклад занять на один навчальний день</th>
+                </tr>
+                <tr>
+                    <th scope="col">День тижня</th>
+                    <th scope="col">Час</th>
+                    <th scope="col">Дисципліна</th>
+                    <th scope="col">Викладач</th>
+                    <th scope="col">Аудиторія</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="5" style="vertical-align: middle; text-align: center; font-weight: bold;">Понеділок</td>
+                    <td>08:00 - 09:20</td>
+                    <td>Web-програмування</td>
+                    <td>Трембовецька Т.В.</td>
+                    <td>210</td>
+                </tr>
+                <tr>
+                    <td>09:30 - 10:50</td>
+                    <td>КПЗ</td>
+                    <td>Трембовецька Т.В.</td>
+                    <td>210</td>
+                </tr>
+                <tr>
+                    <td>11:00 - 12:20</td>
+                    <td>Основи правознавства</td>
+                    <td>Новілова Т.</td>
+                    <td>113</td>
+                </tr>
+                <tr class="break-row">
+                    <td colspan="3" style="text-align: center; font-style: italic; background-color: #fff3cd;">Велика перерва (Обідня перерва)</td>
+                    <td style="background-color: #fff3cd; font-weight: bold; text-align: center;">Їдальня</td>
+                </tr>
+                <tr>
+                    <td>12:50 - 14:10</td>
+                    <td>Менеджмент</td>
+                    <td>Глубашенко Т.В.</td>
+                    <td>508</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table id="book-catalog">
+            <caption>Каталог навчальної літератури з профільних дисциплін</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Назва дисципліни</th>
+                    <th scope="col">Назва книги</th>
+                    <th scope="col">Автор</th>
+                    <th scope="col">Рік видання</th>
+                    <th scope="col">Жанр</th>
+                    <th scope="col">Кількість примірників</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="3" style="font-weight: bold; background-color: #f1f5f9; text-align: center; vertical-align: middle;">Web-програмування</td>
+                    <td>Вивчаємо HTML, CSS та JavaScript</td>
+                    <td rowspan="2">Джон Дакетт</td>
+                    <td>2014</td>
+                    <td>Навчальний посібник</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>JavaScript і jQuery: інтерактивний веб-дизайн</td>
+                    <td>2016</td>
+                    <td>Практичний посібник</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>Сучасний JavaScript для нетерплячих</td>
+                    <td>Кей Горстманн</td>
+                    <td>2020</td>
+                    <td>Технічна література</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td rowspan="2" style="font-weight: bold; background-color: #f1f5f9; text-align: center; vertical-align: middle;">ООП</td>
+                    <td>Об'єктно-орієнтоване програмування</td>
+                    <td>Євген Пасічник</td>
+                    <td>2021</td>
+                    <td>Підручник</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>Чистий код: створення, аналіз та рефакторинг</td>
+                    <td>Роберт Мартін</td>
+                    <td>2013</td>
+                    <td>Програмування</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold; background-color: #f1f5f9; text-align: center; vertical-align: middle;">Інструментальні засоби візуального програмування (ІЗВП)</td>
+                    <td>Візуальне програмування в середовищі Delphi</td>
+                    <td>Олександр Руденко</td>
+                    <td>2018</td>
+                    <td>Навчальний посібник</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold; background-color: #f1f5f9; text-align: center; vertical-align: middle;">Основи програмування та алгоритмічних мов (ОПТАМ)</td>
+                    <td>Алгоритми та структури даних</td>
+                    <td>Ніклаус Вірт</td>
+                    <td>2010</td>
+                    <td>Академічне видання</td>
+                    <td>4</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="lists-section">
+            <div class="list-card">
+                <h3>Улюблені дисципліни в коледжі</h3>
+                <ol>
+                    <li>Web-програмування</li>
+                    <li>Інструментальні програмні засоби</li>
+                    <li>Дискретна математика</li>
+                    <li>Лінійна алгебра</li>
+                    <li>No-code</li>
+                </ol>
+            </div>
+            
+            <div class="list-card">
+                <h3>Улюблені справи в позаурочний час</h3>
+                <ul>
+                    <li>Створення власних вебсторінок</li>
+                    <li>Проходження курсів</li>
+                    <li>Дивитися фільми та серіали</li>
+                    <li>Відвідувати танцювальний гурток</li>
+                    <li>Вивчення іноземних мов</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
